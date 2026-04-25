@@ -20,9 +20,17 @@ print(suma_de_cadenas)
 
 print("La length de primera_variable_string es:", len(primera_variable_string))
 
-#Variable en una sola línea
+#Variable en una sola línea. Cuidado con abusar de esta sintaxis
 nombre, apodo, edad = "Samu", "Pache", 32
 
 print(nombre)
 print(apodo)
 print(edad)
+
+#podemos usar input para meter a mano datos (Hay formas mejores)
+nombre_input = input("¿Cómo te llamas? ")
+
+print("Me llamo: ",nombre_input)
+
+#Recalcamos que tipo de dato queremos que sea, sirve como aviso a otros devs o en un input para guardar el dato
+address: str = "Calle Ave del Paraiso 21"
