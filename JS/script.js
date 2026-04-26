@@ -96,18 +96,108 @@ console.log(miNombre.toUpperCase())
 console.log(miNombre.toLowerCase())
 console.log(miNombre.indexOf("s"))
 console.log(miNombre.includes("v"))
-console.log(miNombre.slice(0,7))
-console.log(miNombre.replace("Drachen","Drako"))
+console.log(miNombre.slice(0, 7))
+console.log(miNombre.replace("Drachen", "Drako"))
 
 //Template literals
-let message =`Hola, este es 
+let message = `Hola, este es 
               mi curso de javascript`
 
 console.log(message)
 
 //Interpolación de variables
-let email ="drachen@wsachbar.com"
+let email = "drachen@wsachbar.com"
 let messageIterpolado = `Hola, soy ${miNombre}! contáctame en ${email}`
 console.log(messageIterpolado)
 
 //Condicionales
+//if, else-if, else
+let age = 37
+//
+if (age == 37) {
+    console.log("Tu edad es 37 jejeje")
+}
+//
+if (age < 18) {
+    console.log("No puede beber")
+} else {
+    console.log("Si que puedes beber")
+}
+//
+if (age < 18) {
+    console.log("No puedes beber")
+} else if (age >= 18 && age < 50) {
+    console.log("Puedes beber")
+} else {
+    console.log("Puedes beber, pero debes? Consulta tu medicación")
+}
+
+//Operadores Ternarios
+console.log(age < 18 ? "Es menor de edad" : "Es mayor de edad")
+
+//Switch
+
+let day = 6
+let dayName
+
+switch (day) {
+    case 0:
+        dayName = "Lunes"
+        break
+    case 1:
+        dayName = "Martes"
+        break
+    case 2:
+        dayName = "Miércoles"
+        break
+    case 3:
+        dayName = "Jueves"
+        break
+    case 4:
+        dayName = "Viernes"
+        break
+    case 5:
+        dayName = "Sábado"
+        break
+    case 6:
+        dayName = "Domingo"
+        break
+    default:
+        dayName = "undefined"
+}
+
+console.log(`Hoy es ${dayName}`)
+
+//Estructuras de datos
+//Arrays
+let myArray = []
+let myArray2 = new Array()
+
+console.log(myArray)
+console.log(myArray2)
+
+//Inicialización
+
+myArray = [1]
+myArray2 = new Array(3) //El número reserva el número de celdas
+
+console.log(myArray)
+console.log(myArray2)
+
+//
+
+myArray = [1, 2, 3, 4]
+myArray2 = new Array(1, 2, 3, 4)  //Un número reserva el número de celdas, varios inicializa los datos
+
+console.log(myArray)
+console.log(myArray2)
+
+//Otra forma de inicializar
+myArray2 = new Array()
+
+myArray2[0] = "Samu"
+myArray2[1] = "Pache"
+myArray2[2] = "Drachenwaschbär"
+myArray2[3] = 32
+
+console.log(myArray2)
