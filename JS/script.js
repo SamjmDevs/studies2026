@@ -201,3 +201,34 @@ myArray2[2] = "Drachenwaschbär"
 myArray2[3] = 32
 
 console.log(myArray2)
+
+myArray2.push("Español") //Añade en último lugar
+
+console.log(myArray2)
+
+myArray2.pop() //Elimina el último elmento del array y lo devuelve
+
+//Shift
+myArray2.shift() //Igual que el pop, también devuelve
+
+//Unshift
+
+myArray2.unshift(32, "Drachenwaschbär") //Mete varios elementos al principio del array
+
+console.log(myArray2.length) //Da el número de elmentos del array
+
+//Borrar un array
+//myArray2 = []
+//myArray2.length = 0 //Este es poco elegante
+
+//Slice
+//Devuelve copia superficial de una porción
+
+myArray2.slice(1, 2)//El último no cuenta dentro del slice, aquí solo guardaría el elemento del índice 1
+
+//Splice
+
+//myArray2.splice(1, 2)//Elimina los elementos desde el índice del primer número elimina tantos elementos como indica el segundo número
+
+//myArray2.splice(1,2,4)//Aquí desde la última posición que eliminamos añadimos el tercer número
+
