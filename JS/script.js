@@ -232,3 +232,37 @@ myArray2.slice(1, 2)//El último no cuenta dentro del slice, aquí solo guardar�
 
 //myArray2.splice(1,2,4)//Aquí desde la última posición que eliminamos añadimos el tercer número
 
+//Comenzamos con sets
+//Declaración
+let mySet = new Set(["Samu", "Pache", 32, "Drachenwaschbär", 1.69])
+
+console.log(mySet)
+
+//Métodos comunes
+//Añadir datos
+mySet.add("pache@drachen.com") //Añade al final
+
+mySet.delete("pache@drachen.com")//No borra el último elemento, tenemos que indicar el valor, devuelve bool, true si existe y fue borrado o false si no
+
+//has
+//Devuelve true si el elemento existe dentro del set o false si no
+mySet.has("Drachen") //Devolvería false
+
+//size
+console.log(mySet.size()) //Devuelve el número de elementos, como length de arrays
+
+//Convertir de set a array
+let arrayFromSet = Array.from(mySet)
+
+//Convertir de array a set
+
+let myArray3 = [1, 5, 69.69, "alto"]
+let mySet2 = new Set(myArray3)
+
+//Principal diferencia
+
+mySet.add("Samu") //No añade elementos que estén ya en el set
+//No admite duplicados
+//Cualquier modificación (case sensitive) el set entiende que es otro valor
+
+//Map
