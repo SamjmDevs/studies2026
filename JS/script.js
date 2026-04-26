@@ -249,7 +249,7 @@ mySet.delete("pache@drachen.com")//No borra el último elemento, tenemos que ind
 mySet.has("Drachen") //Devolvería false
 
 //size
-console.log(mySet.size()) //Devuelve el número de elementos, como length de arrays
+console.log(mySet.size) //Devuelve el número de elementos, como length de arrays
 
 //Convertir de set a array
 let arrayFromSet = Array.from(mySet)
@@ -265,4 +265,44 @@ mySet.add("Samu") //No añade elementos que estén ya en el set
 //No admite duplicados
 //Cualquier modificación (case sensitive) el set entiende que es otro valor
 
-//Map
+//Map => key && value
+
+let myMap = new Map()
+
+myMap = new Map([
+    ["name", "Samu"],
+    ["alias", "Pache"],
+    ["edad", 32],
+    ["altura", 1.69]
+])
+
+console.log(myMap)
+
+//Métodos y propiedades
+
+//set
+myMap.set("nacionalidad", "Español")//Si no existe la key la añade
+myMap.set("name", "Samuel Alejandro")//Si existe la actualiza
+//La clave es única, los valores pueden repetirse
+
+//get
+console.log(myMap.get("alias"))//Devuelve el valor asociado a esa clave
+
+//has
+console.log(myMap.has("apellido"))//Devuelve false
+
+//Delete
+myMap.delete("altura")//Elimina la clave y el valor asociado
+
+//clear
+
+//myMap.clear()//Borra completamente el contenido del map
+
+myMap.keys()//Devuelve el listado de claves
+myMap.values()//Devuelve el listado de valores
+
+//size
+myMap.size //Devuelve el número de pares asociados al map
+
+//entries
+myMap.entries() //Devuelve todo, keys con sus values
