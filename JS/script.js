@@ -415,3 +415,109 @@ func(param)
 myArray.forEach(element => {
     console.log(element)
 });
+
+//Objetos
+
+let person = {
+    "name": "Samu",
+    "edad": 32,
+    "alias": "Pache",
+    "especie": "Mapache"
+}
+
+//Acceso a propiedades
+//Notación por punto, es la recomendada
+console.log(person.name)
+//Notación por corchete
+console.log(person["name"])
+//
+//Cambio de valors
+person.name = "Samuel Jiménez"
+console.log(person.name)
+//Podemos cambiar hasta el tipo de dato
+
+//Eliminación de propiedades
+delete person.especie
+
+//Añadir propiedad
+
+person.email = "pache@mapache.com"
+
+person["especie"] = "Mapache"
+
+//Podemos tener funciones en objetos
+
+let person2 = {
+    "name": "Samu",
+    "edad": 32,
+    "alias": "Pache",
+    walk: function () {
+        console.log("Caminando")
+    }
+}
+
+person2.walk()
+
+//Los objetos se pueden anidar
+
+let person3 = {
+    "name": "Samu",
+    "edad": 32,
+    "alias": "Pache",
+    job: {
+        "puesto": "Programador",
+        "experiencia": "nada",
+        "salario": 0
+    }
+}
+
+console.log(person3.job.salario)
+
+//Igualdad de objects
+
+let person4 = {
+    "name": "Samu",
+    "edad": 32,
+    "alias": "Pache",
+    job: {
+        "puesto": "Programador",
+        "experiencia": "nada",
+        "salario": 0
+    }
+}
+
+console.log(person3 == person4)
+console.log(person3 === person4)
+
+//Se comparan direcciones de memoria, por eso da false
+//Para comprar deberíamos comparar por propiedad
+
+//Iteramos con un for in
+for (let key in person4) {
+    console.log(key + "---" + person4[key])
+}
+
+//Para acceder a otra info dentro, se usa this. y el nombre de la key
+//This hace referencia al objeto en el que se encuentra
+
+//Funciones como objetos
+function Person(name, age) {
+    this.name = name
+    this.age = age
+}
+//Creamos un constructor
+let person5 = new Person("Drachen", 32)
+
+console.log(person5)
+
+//Desestructuración y propagación
+
+//Desestructuración
+myArray = [1, 2, 3, 4, 5]
+//
+person = {
+    "name": "Samuel",
+    "age": 32,
+    "mood": "meh"
+}
+//
