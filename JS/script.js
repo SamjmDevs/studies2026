@@ -683,3 +683,57 @@ class PrivatePerson {
 }
 
 //Con set y get permite cambiar y ver los datos
+
+//Herencia de clases
+class Animal {
+    constructor(name) {
+        this.name = name
+    }
+    sound() {
+        console.log("Emite sonido genérico")
+    }
+}
+//
+class Perrete extends Animal {
+
+    sound() {
+        console.log("El perro ladra")//Sobrescribimos el método del padre
+    }
+    run() {
+        console.log("El perro corre")
+    }
+}
+//
+class Pez extends Animal {
+
+    constructor(name, size) {
+        super(name)//LLamamos al constructor del padre
+        this.size = size
+    }
+    swim() {
+        console.log("El pez no corre, el pez nada")
+    }
+}
+//
+let perro = new Perrete("Dino")
+let goldie = new Pez("Goldie", "Pequeño")
+//
+perro.run()
+perro.sound()
+goldie.sound()
+goldie.swim()
+
+//Métodos estáticos
+class MathOperations {
+    static sum(a, b) {
+        return a + b
+    }
+}
+//let myMath = new MathOperations()
+//console.log(myMath.sum(3,8))
+
+//Al ser estático no necesitamos estanciarla
+
+console.log(MathOperations.sum(3, 8))
+
+//Genera utilidades
