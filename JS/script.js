@@ -345,5 +345,73 @@ for (let valor of myMap) {
 //Buenas prácticas
 //revisar bucles infinitos (evitar)
 //usar break y continue
-//continue se salta el siguiente código y continúa en la siguiente iteracción
+//continue se salta la iteracción actual y continúa en la siguiente iteracción
 //break rompe el bucle
+
+//Funciones
+//Simple
+function myFunction() {
+    console.log("Hola función")
+}
+
+myFunction()
+
+//Con parámetros
+function myFuncParams(name, alias) {
+    console.log("Hola, me llamo " + name + " pero me llaman " + alias)
+}
+myFuncParams("Samu", "Pache")
+
+//Funciones anónimas
+const myAnonFunc = function (name) {
+    console.log("Soy el fantasma de " + name)
+}
+myAnonFunc("Drachenwaschbär")
+
+//arrow functions
+const myFuncArrow = (name) => {
+    console.log("Mimimimimi dijo " + name)
+}
+//
+myFuncArrow("Lizth")
+//Parámetros
+function sum(a, b) {
+    console.log(a + b)
+}
+sum(2, 3)
+//
+function sumDefault(a = 0, b = 0) {
+    console.log(a + b)
+}
+//
+function sumatorio(a, b) {
+    return a + b
+}
+//
+let suma = sumatorio(2, 7)
+console.log(suma)
+//
+//Funciones anidadas
+//
+function extern() {
+    console.log("Capa externa")
+    function intern() {
+        console.log("Capa interna")
+    }
+    intern()
+}
+extern()
+//intern() => fuera del scope salvo que la llamemos dentro de extern
+
+//Funciones de orden superior
+//Funciones que reciben otras funciones como argumentos
+/*
+function fuctSuperior(func, param){
+func(param)
+}
+*/
+
+//foreach
+myArray.forEach(element => {
+    console.log(element)
+});
