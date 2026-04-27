@@ -580,3 +580,106 @@ let person7 = { ...person6, "bestTime": "night" }
 console.log(person7)
 
 //CLASES
+
+let classPerson = {
+    "firstName": "Samu",
+    "old": 32,
+    "alsoKnown": "Pache",
+    "job": "programmer"
+}
+
+class Persona {
+    constructor(name, age, alias, work) {
+        this.name = name,
+            this.age = age,
+            this.alias = alias,
+            this.work = work
+    }
+}
+//Sintaxis
+
+let personaClass = new Persona("Pache", 32, "Mapache", "Estudiante")
+console.log(personaClass)
+
+//Sintaxis con valores por defecto
+class DefaultPerson {
+    constructor(name = "NoName", age = 0, alias = "NoAlias", work = "Unemployed") {
+        this.name = name,
+            this.age = age,
+            this.alias = alias,
+            this.work = work
+    }
+}
+
+let personaRandom = new DefaultPerson("Samuel", 32);
+
+console.log(personaRandom)
+
+//Acceso a propiedades
+console.log(personaRandom.alias)
+console.log(personaRandom["alias"])
+
+personaRandom["alias"] = "El Mapache"
+personaRandom.work = "Student"
+
+console.log(personaRandom)
+
+//funciones en clases
+
+class ClassPerson {
+    constructor(name = "NoName", age = 0, alias = "NoAlias", work = "Unemployed") {
+        this.name = name,
+            this.age = age,
+            this.alias = alias,
+            this.work = work
+    }
+    walk() {
+        console.log(this.name + " está andando")
+    }
+}
+let personaClase = new ClassPerson("Zamu")
+personaClase.walk()
+
+//Private class
+
+class PrivatePerson {
+    #bank
+    constructor(name = "NoName", age = 0, alias = "NoAlias", work = "Unemployed", bank) {
+        this.name = name,
+            this.age = age,
+            this.alias = alias,
+            this.work = work,
+            this.#bank = bank
+    }
+    pay() {
+        this.#bank
+    }
+}
+
+let personaPrivada = new PrivatePerson("Samuel", 32, "Pache", "Programador", "IBAN123456789")
+console.log(personaPrivada.bank)//No podemos acceder
+//Si intenamos modificar con personaPrivada.bank crearía una propiedad bank nueva, no accedería a la privada
+
+//Para acceder a los datos incluso privados necesitas los getter y setter
+
+class PrivatePerson {
+    #bank
+    constructor(name = "NoName", age = 0, alias = "NoAlias", work = "Unemployed", bank) {
+        this.name = name,
+            this.age = age,
+            this.alias = alias,
+            this.work = work,
+            this.#bank = bank
+    }
+    pay() {
+        this.#bank
+    }
+    get bank() {
+        return this.#bank
+    }
+    set bank(newBank) {
+        this.#bank = newBank
+    }
+}
+
+//Con set y get permite cambiar y ver los datos
