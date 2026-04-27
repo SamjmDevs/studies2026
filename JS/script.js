@@ -515,9 +515,68 @@ console.log(person5)
 //Desestructuración
 myArray = [1, 2, 3, 4, 5]
 //
-person = {
-    "name": "Samuel",
-    "age": 32,
-    "mood": "meh"
+let persona = {
+    "nombre": "Samu",
+    "antiguedad": 32,
+    "aka": "Pache",
+    "especie": "Mapache"
 }
 //
+//Sintaxis en array
+let [myValue0, myValue1, myValue2, myValue3, myValue4] = myArray //Cada myValue tiene un dato del índice de myArray
+
+//Sintaxis de array con valores predeterminados
+let [my2Value0 = 0, my2Value1 = 0, my2Value2 = 0, my2Value3 = 0, my2Value4 = 0, my2Value5 = 0] = myArray
+//Si llegase algún valor a ser undefined, sería asignado el valor por defecto 0
+console.log(my2Value0 + "/" + my2Value1 + "/" + my2Value5)
+
+//Si dejamos huecos con comas, esos valores no los desestructuramos
+//let [my2Value0 = 0,   ,  ,   ,my2Value4 = 0, my2Value5 = 0] = myArray
+
+//Desestructuración de objetos
+//En objeto de desestructura con {}
+
+let { nombre, antiguedad, aka } = persona //Va con el key
+console.log(nombre)
+
+//Con valores predeterminados puede servir pero bueno, no tiene mucho sentido
+//Para dar nombres de variables
+let { nombre: name2, edad, alias } = persona //Va con el key
+console.log(name2)
+//
+
+let person6 = {
+    "firstName": "Samu",
+    "old": 32,
+    "alsoKnown": "Pache",
+    job: {
+        "workingAs": "Programador",
+        "experience": "nada",
+        "salary": 0
+    }
+}
+//Desestructurar con objetos anidados
+let { firstName, old, alsoKnown, job: { workingAs, experience, salary } } = person6
+console.log(workingAs)
+
+//Propagación
+//Sintaxis array
+
+let myArray4 = [...myArray]
+
+let myArray5 = [...myArray, 6, 7]
+console.log(myArray4)
+console.log(myArray5)
+
+//Combina arrays
+myArray5 = [...myArray, ...myArray2, ...myArray3]
+console.log(myArray5)
+
+//Sintaxis de objetos
+//Igual que con arrays practicamente
+
+let person7 = { ...person6, "bestTime": "night" }
+
+console.log(person7)
+
+//CLASES
