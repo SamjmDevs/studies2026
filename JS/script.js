@@ -306,3 +306,44 @@ myMap.size //Devuelve el número de pares asociados al map
 
 //entries
 myMap.entries() //Devuelve todo, keys con sus values
+
+//Comenzamos con bucles
+//for
+//inicializamos la variable, hasta cuando se repite, actualizacion de índice
+for (let i = 0; i < 5; i++) {
+    console.log("Hello")
+}
+
+let myNumbers = ["1-uno", "2-dos", "3-tres", "4-cuatro", "5-cinco"]
+for (let i = 0; i < myNumbers.length; i++) {
+    console.log(myNumbers[i])
+}
+
+//while
+let i = 0
+while (i < myNumbers.length) {
+    console.log(myNumbers[i])
+    i++
+}
+i = 0
+do {
+    console.log("imprimimos i: " + i)
+    i++
+} while (i > myNumbers.length)
+
+//for of
+for (let valor of myArray) {
+    console.log("for of de myArray:" + valor)
+}
+for (let valor of mySet) {
+    console.log("for of de mySet:" + valor)
+}
+for (let valor of myMap) {
+    console.log("for of de myMap:" + valor)
+}
+//Por cada elemento de las estructura de datos
+//Buenas prácticas
+//revisar bucles infinitos (evitar)
+//usar break y continue
+//continue se salta el siguiente código y continúa en la siguiente iteracción
+//break rompe el bucle
