@@ -1,39 +1,5 @@
-main {
-    display: flex;
-    flex-direction: row;
-    /* Cambiamos 'left' por 'flex-start' y aseguramos que use todo el ancho */
-    justify-content: flex-start;
-    width: 100%;
-}
-
-section {
-    /* flex-grow: 0 (no crece más de lo debido)
-       flex-shrink: 0 (no se encoge)
-       flex-basis: 33.33% (su tamaño base es un tercio)
-    */
-    flex: 0 0 33.33%;
-
-    /* Opcional: añade box-sizing para que el padding no rompa el diseño */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-section img {
-    margin: 0 auto;
-    width: 40%;
-}
-
-h2 {
-    text-decoration: underline;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.resaltado {
-    font-weight: bold;
 }
