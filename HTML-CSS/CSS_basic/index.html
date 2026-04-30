@@ -46,6 +46,7 @@
             text-transform: capitalize;
             text-shadow: 0px 0px 3px #000;
         }
+
         /*
         Padding: Relleno, distancia desde el contenido al borde de la caja.
         Border: Línea que rodea tanto al contenido como al padding, por el borde exterior.
@@ -69,7 +70,30 @@
         <li>Sal</li>
     </ul>
 -->
-    <!--2:55:37-->
+    <!--BOX-->
+    <!--
+    box-sizing: border-box;
+    Se estira de manera general, no mantiene el tamaño; El ancho y el alto definen el contenido
+    box-sizing: content-box;
+    Se estira hasta el padding y luego hasta el borde, manteniendo el tamaño; El ancho y el alto definen la caja entera.
+    -->
+    <!--
+    COLOR
+    RGBA -> RED GREEN BLUE ALFA -> Del 0 al 255 cuanta cantidad de color va a tener cada capa, ALFA es la transparencia (por porcentajes o de 0 a 1 con decimales)
+    HEX -> #XXYYZZ; -> del 00 al FF -> Cuanto rojo verda y azul por pares. Primer número del par (izquierda) color, segundo número del par (derecha) el tono.Si el par tiene el mismo valor en ambos, se puede usar solo 1, no vale mezclar, o #AAA; o #AA17BB; Si añades un cuarto par, es el ALFA, la opacidad.
+    HSLA -> Hue, Saturation, Lightness, Alfa -> HSL (0 (rojo), 70%, 50%) y te da el color que patata
+    url(htmlcolorcodes.com/color-picker/)
+    -->
+    <!--
+    UNIDADES DE MEDIDA
+    Píxeles -> px -> Medida absoluta
+    Cms, mms, inch -> cm, mm, in -> Medidas absolutas y físicas (Más bien para impresión)
+    Porcentaje -> % -> Medida relativa, depende de contenedores, tipografías, pantalla de visionado...
+    Porcentaje en font-size da el % respecto al font-size del contenedor
+    Porcentajes en margin -> Se mueve el % en la dirección especificada del total del tamaño de la caja padre.
+    Em -> 1 em = font-size del elemento padre (o el predeterminado)
+    Rem -> Igual que em pero busca el font-size del elemento raíz
+    -->
 </body>
 
 </html>
