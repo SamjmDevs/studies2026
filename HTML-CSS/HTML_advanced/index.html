@@ -29,13 +29,17 @@
     <form action="">
         <h2>Formulario de contacto</h2>
         <div>
-            <input type="text" name="firstName" id="firstName" placeholder="Nombre Completo">
+            <label for="firstName">Nombre Completo</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John Doe">
         </div>
         <div>
+            <label for="mail">Correo Electrónico</label>
             <input type="email" name="mail" id="mail" placeholder="Email">
         </div>
         <div>
-            <textarea name="suggestion" id="suggestion" readonly></textarea><!--readoly solo lo hace de lectura-->
+            <label for="suggestion">Su Mensaje</label>
+            <textarea name="suggestion" id="suggestion" readonly
+                placeholder="Deja tu mensaje..."></textarea><!--readoly solo lo hace de lectura-->
             <!--readonly desabilita la escritura, disable desabilita laa escritura y el focus-->
             <!--
             EN CSS
@@ -48,7 +52,6 @@
             max-lenght -> máximo de caracteres
             rows -> número de enters que acepta antes de scroll
             cols -> número de columnas
-            
             -->
         </div>
     </form>
