@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--lang es el lenguaje en el cual está escrita la página-->
+<html lang="es">
+
+<head>
+    <!-- charset = conjunto de caracteres usados-->
+    <meta charset="UTF-8">
+    <!--width=device-width == el ancho total es el ancho del dispositivo-->
+    <!-- initical-scale =1.0 == el zoom inicial es el número por 100, 1->100%, 2.25-> 225%-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon, el icono de la pestaña-->
+    <!--Normalmente 32x32px o como mucho 64c64px-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--Title es el título que aparecerá en la pestaña junto al favicón-->
+    <title>HTML AVANZADO</title>
+    <!--description aporta una breve descripción de la web, recomendable alrededor de 100 char, ayuda con el SEO-->
+    <meta name="description" content="">
+    <!--Da las palabras clave que representarán a tu web-->
+    <meta name="keywords" content="">
+    <!--author proclama quien es el autor de la web-->
+    <meta name="author" content="PacheDevs">
+    <!--Los OG: aporta información que aparecerá cuando copiemos y peguemos la url de la página-->
+    <meta name="og:title" content="blablabla">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="">
+        <h2>Formulario de contacto</h2>
+        <div>
+            <input type="text" name="firstName" id="firstName" placeholder="Nombre Completo">
+        </div>
+        <div>
+            <input type="email" name="mail" id="mail" placeholder="Email">
+        </div>
+        <div>
+            <textarea name="suggestion" id="suggestion" readonly></textarea><!--readoly solo lo hace de lectura-->
+            <!--readonly desabilita la escritura, disable desabilita laa escritura y el focus-->
+            <!--
+            EN CSS
+            resize: both (ambos ejes), vertical (solo eje vertical), none (no se resize)...
+            min-height -> Altura mínima.
+            min-width -> Anchura mínima
+            (No funciona width y height)
+            font-family -> el text area tiene su propia typo
+            form-sizing: content; para que se adapte al contenido
+            max-lenght -> máximo de caracteres
+            rows -> número de enters que acepta antes de scroll
+            cols -> número de columnas
+            
+            -->
+        </div>
+    </form>
+
+</body>
+
+</html>
