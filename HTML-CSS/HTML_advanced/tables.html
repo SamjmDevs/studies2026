@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        table {
+            width: 90%;
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <!-- th = table header = Encabezado de tabla-->
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- tr = table row = fila de la tabla-->
+                <td>Celda 1 - Fila 1</td>
+                <!-- td = table data = dato de tabla o celda-->
+                <td>Celda 2 - Fila 1</td>
+                <td>Celda 3 - Fila 1</td>
+            </tr>
+            <tr>
+                <td>Celda 1 - Fila 2</td>
+                <td>Celda 2 - Fila 2</td>
+                <td>Celda 3 - Fila 2</td>
+            </tr>
+            <tr>
+                <td>Celda 1 - Fila 3</td>
+                <td>Celda 2 - Fila 3</td>
+                <td>Celda 3 - Fila 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Celda 1 - Fila 4</td>
+                <td>Celda 2 - Fila 4</td>
+            </tr>
+            <tr>
+                <td>Celda 1 - Fila 5</td>
+                <td colspan="2">Celda 2 - Fila 5</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Celda 1 - Fila 6-7</td>
+                <td>Celda 2 - Fila 6</td>
+                <td>Celda 3 - Fila 6</td>
+            </tr>
+            <tr>
+                <td>Celda 2 - Fila 7</td>
+                <td>Celda 3 - Fila 7</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Celda 1 - Fila 8</td>
+                <td>Celda 2 - Fila 8</td>
+                <td>Celda 3 - Fila 8</td>
+            </tr>
+        </tfoot>
+        <!--7:15:01 timestamp-->
+    </table>
+</body>
+
+</html>
