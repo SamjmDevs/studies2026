@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio y Video</title>
+    <style>
+        video {
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Impactantes imágenes</h1>
+        <video controls autoplay loop src="video_hamster.mp4" muted alt="Video de un hamster haciendo su vida"
+            name="Video de un hamster haciendo su vida">Video no soportado por su navegador
+            <track src="archivo_de_subtítutlos.vtt">
+        </video>
+    </div>
+
+    <!--
+    video para la etiqueta de video
+    controls para que aparezca la barra de control del video
+    autoplay para que se reproduzca automáticaente
+    muted para que se reproduzca en silencio
+    El mensaje aparece SOLO cuando el video no sea soportado por el navegador
+    loop para que se reproduzca en bucle
+    La etiqueta track permite añadir los subtítulos al video, si a track añadimos la propiedad default estarán activados de manera predeterminada
+    kind="caption" o kind="subtitles" para añadir que tipo de pista de subtítulos son
+    srclang="es" indicas que los subtítulos son en español
+    label="Español" para que aparezca que el lenguaje de subtítulos es Español
+
+    Los subtítulos no se pueden modificar con css, los archivos vtt ya traen sus propias configuraciones, si se puede pero es avanzado
+    -->
+    <div>
+        <h2>Música impactante</h2>
+        <audio src="pyramid_secrets.mp3" controls muted alt="Música de egipto en rol"
+            name="Música de egipto en rol"></audio>
+    </div>
+
+</body>
+
+</html>
