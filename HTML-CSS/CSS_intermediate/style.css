@@ -1,0 +1,43 @@
+/* Con [] podemos seleccionar el atributo que tiene la etiqueta a la que afectará el estilo */
+img[src="hamster.png"] {
+    width: 35%;
+}
+
+/* Si ponemos src$ luego en el igual ponemos la extensión de imagen que se verá afectada por el estilo*/
+/* El símbolo $ dice "empieza por algo que da igual pero tiene que terminar con lo que hay entre corchetes" */
+img[src$="jpg"] {
+    width: 35%;
+}
+
+/* Si ponemos src^ luego en el igual ponemos el inicio que se verá afectado por el estilo*/
+/* El símbolo ^ dice "termina por algo que da igual pero tiene que empezar con lo que hay entre corchetes" */
+img[src^="raton"] {
+    width: 35%;
+}
+
+/* Selectores descendentes */
+/* Elementos separados por espacio indican, de derecha a izquierda, un algo que está dentro de otro algo */
+ul li {
+    color: #777;
+    text-decoration: underline;
+}
+
+ul em {
+    color: #f14;
+}
+
+/* Seleccionar a un hijo directo */
+ul>em {
+    color: #df1;
+}
+
+/* Selector adyacente */
+/* Con +, de derecha a izquierda, un algo que está a continuación de otro algo, inmediatamente a continuación, no hay nada entre medias */
+h1+p {
+    color: #14b;
+}
+
+/* Selector de hermanos generales */
+h1~p {
+    border: 1px dotted #222;
+}
