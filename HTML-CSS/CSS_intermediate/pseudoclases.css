@@ -1,0 +1,51 @@
+h1 {
+    text-decoration: underline;
+}
+
+h1:hover {
+    text-decoration: none;
+}
+
+/*
+PSEUDOCLASES
+
+hover => cuando pasamos el ratón por encima
+active => cuando hacemos click al elemento
+first-child => el primer hijo de algo, ejemplo el primer li
+last-child => el último hijo de algo, ejemplo el último li
+nth-child(x) => el hijo número x de algo, ejemplo el li número x
+nth-child(xn) => se seleccionarán cada elemento x, ejemplo 2n, uno si, uno no, 3n, cada tercero, o sea, dos no y uno si
+x:nth-of-type(y) => el elemento y del tipo x, independientemente de lo que haya por medio
+x:not(tal) => selecciona todos los elementos x, menos el que tenga "tal", ejemplo, el li que tenga la clase .elemento-ejemplo no es afectado por el estilo
+x:empty => Selecciona los tags que estén vacíos
+x:checked => Si el elemento está checkeado (como una checkbox) aplica o desaplica estilos
+a:link => Para enlaces no visitados
+a:visited => Para enlaces visitados
+x:focus => cuando está seleccionado, ejemplo, cuando escribimos en un input
+x:valid => Cuando el contenido de un input es válido
+x:invalid => cuando el contenido de un input no es válido
+
+:root{} => Eso selecciona al elemento raíz, útil para dar estilos predeterminados que luego podrán ser sobrescritos
+
+mdn pseudoclases => web recomendada para ver todas las pseudoclases
+*/
+
+/*
+Apartado especial
+
+x:has() => si el elemento x contiene lo que está entre paréntesis (una clase, un id...) el estilo se aplica al elemento x, o sea, al elemento padre
+x:has(+y) => si el elemento x tiene a continuación un elemento y
+
+Ejemplo;
+ul + div => modificamos el div
+ul:has(+div) => modificamos el ul
+
+x:is => dar a varios elementos un estilo si están dentro de otro bloque más grande
+Ejemplo: section:is(.clase1, .clase2, .clase3){
+Todo lo que tenga esas clases dentro de section se ve afectado por este estilo
+}
+
+x:where => igual que :is pero where no cambia la especificidad e is si que la cambia
+
+
+*/
