@@ -1,0 +1,40 @@
+div {
+    padding: 20px;
+}
+
+h1::first-letter {
+    color: #25f;
+}
+
+p::first-line {
+    text-decoration: underline;
+}
+
+input {
+    padding: 0;
+    border: none;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+input::placeholder {
+    color: #25f;
+    background-color: #bbb;
+    padding: 5px;
+}
+
+li::marker {
+    color: #25f;
+}
+
+li::before {
+    content: "Sub-elemento: ";
+    color: #11f;
+}
+
+li::after {
+    content: " privado";
+    color: #444;
+}
+
+/*Hay más, así que se pueden investigar*/
