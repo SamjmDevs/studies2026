@@ -41,3 +41,12 @@ h1+p {
 h1~p {
     border: 1px dotted #222;
 }
+
+/* La coma "," selecciona a varias etiquetas, sin relación, un conjunto de etiquetas específicas */
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

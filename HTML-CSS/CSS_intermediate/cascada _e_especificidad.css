@@ -1,0 +1,30 @@
+/*El orden importa, si la especificidad es igual en valor, se tomará el estilo más abajo ya que se lee de arriba a abajo línea a línea*/
+/*
+LA CASCADA:
+!important
+style de linea
+style de css
+configuración de usuario en navegador
+configuración predeterminada del navegador
+
+Ese es el orden de prioridad de más importante (arriba) a menos importante (abajo)
+*/
+h1 {
+    /*Specificity (0,0,1) la más baja, más general*/
+    color: red;
+}
+
+.titulo {
+    /*Specificity (0,1,0) la media, más exclusiva*/
+    color: blue;
+}
+
+#titulo {
+    /*Specificity (1,0,0) la más alta, más exlusica*/
+    color: green;
+}
+
+/*Los estilos en línea tienen aún más especificidad que el id*/
+
+/*La especificidad más alta de todas es !IMPORTANT, no hay nada más arriba de ello, se añade justamente como !important después del estilo*/
+/* color:blue !important; OJITO!!! no lo pongas después de ";" */

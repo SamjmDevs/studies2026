@@ -1,0 +1,11 @@
+h1 {
+    color: #f1a;
+    /*color:inherit => hereda el valor que tenga la caja superior, si no hay ningún valor, sigue buscando más arriba en cajas superiores hasta llegar a root*/
+}
+
+p {
+    color: #1af;
+    /*color:initial; => Toma el valor por defecto del navegador*/
+    /*color:unset; => lo devuelve a inherit si lo hubiera, sino lo devuelve a initial */
+    /*color:revert; => es como unset, pero primero busca si el usuario determinó su estilo predeterminado, si no hay restaura el del sistema*/
+}
