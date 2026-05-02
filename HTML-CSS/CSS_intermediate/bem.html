@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología BEM</title>
+    <style>
+        .lista {
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        .lista--vieja {
+            opacity: .5;
+            background-color: bisque;
+        }
+
+        .lista__item {
+            color: #222;
+            list-style: square;
+        }
+
+        .elemento--principal {
+            text-decoration: underline;
+        }
+
+        .elemento--opcional {
+            color: #aaa;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>¿Qué es BEM?</h1>
+    <p>
+        BEM viene de Block Element Modifier.<br>
+        Una metodología es una forma específica de trabajar.<br>
+        El uso de esta metodologia nos permite reutilizar código. También resuelve conflictos de especificidad.<br>
+        BEM permite saber como nombrar las clases para simplemente al verlas saber que hacen.<br>
+        Un bloque es un componente de una página que podemos reutilizar y que no depende de otro componente.<br>
+        Al nombrar las clases con la metodología BEM usamos class="bloque__elemento__modificador" => class="lista__item
+        (espacio) segunda--clase"
+    </p>
+    <ul class="lista">
+        <li class="lista_item elemento--principal">Elemento 1</li>
+        <li class="lista_item">Elemento 2</li>
+        <li class="lista_item">Elemento 3</li>
+        <li class="lista_item elemento--opcional">Elemento 4</li>
+        <li class="lista_item">Elemento 5</li>
+    </ul>
+    <ul class="lista lista--vieja">
+        <li class="lista_item elemento--principal">Elemento 1</li>
+        <li class="lista_item">Elemento 2</li>
+        <li class="lista_item">Elemento 3</li>
+        <li class="lista_item elemento--opcional">Elemento 4</li>
+        <li class="lista_item">Elemento 5</li>
+    </ul>
+    <!--9:49:34 timestamp-->
+</body>
+
+</html>
