@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            padding: 20px;
+            background-color: #999;
+            margin: 5px;
+        }
+
+        /*a {
+            background-color: #ccc;
+            display: block;
+            border: 1px solid black;
+            /*Por defecto los a tienen display: inline*/
+        /*display: block; => Hace que se muestre y comporte como un elemento de bloque, no de línea*/
+        /*Los elementos en bloque aceptan márgenes, paddings, afectan a la caja, de lo contrario solo se verían afectados ellos mismos*/
+        /*}*/
+
+
+        p {
+            background-color: #eee;
+            display: inline;
+            margin: 5px;
+            /*Al contrario que con display: block; ahora p, que era de bloque, se comporta como un elemento de línea. 
+            Ahora el padding y el margin que les afecta solo es horizontal. 
+            Tampoco acepta un alto ni un ancho*/
+        }
+
+        .nav {
+            background-color: #48e;
+        }
+
+        .nav__list {
+            margin: 0;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .nav__item {
+            display: inline-block;
+            /*
+            display: inline-block; => Hace que los elementos de bloque se coloquen seguidos como si fueran de línea sin perder la aceptación de margin y padding como en los elementos de línea
+            */
+        }
+
+        .nav__link:hover {
+            background-color: #59e;
+        }
+
+        .nav__link {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .link--button {
+            border: 1px solid #fff;
+            background-color: #fff;
+            padding: 4px 18px;
+            color: #48e;
+            border-radius: 3px;
+            margin-left: 60px;
+            /*display: none => desaparece, pero no solo se oculta, sino que deja de ocupar espacio en la página, tampoco cuenta como hermano con los selectores*/
+        }
+
+        .link--button:hover {
+            color: #fff;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="">Enlace 1</a>
+        <a href="">Enlace 2</a>
+    </div>
+    <div class="lineal">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+    </div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="">HOME</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="">ABOUT</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="">FAQ</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="">WORK</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link link--button" href="">LOG IN</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

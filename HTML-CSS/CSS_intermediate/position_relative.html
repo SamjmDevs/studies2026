@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Relative</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #ededed;
+        }
+
+        .box {
+            /*position:static es la propiedad por defecto, con static z-index no funciona*/
+            width: 100px;
+            height: 100px;
+            background-color: #e12;
+            color: #fff;
+            position: relative;
+            /*El elemento mantiene su posición en la caja pero puedo moverlo libremente, y se transforman en un punto de referencia para los elementos dentro de si mismos
+            
+            El lugar de la caja se reserva, pero se mueve visualmente, el div está en su sitio pero el css lo proyecta en otro sitio.
+            */
+        }
+
+        .box--blue {
+            background-color: #48e;
+            top: 10px;
+            left: 30px;
+            /*
+            Con right, left, top y bottom indicamos cuantos píxeles (u otra medida) se moverá el elemento hacia la dirección contraria, bottom (con valores positivos) moverá hacia top (arriba) el elemento. 
+            Pudiendo salirse del mapa (pantalla visible)
+
+            top tiene prioridad sobre bottom y left sobre right 
+            
+            */
+            z-index: 2;
+            /*z-index mueve el elemento en una capa de profundidad en el eje z*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">BOX 1</div><!--z index 1.1-->
+    <div class="box box--blue">BOX 2</div><!--z index 1.2-->
+    <div class="box">BOX 3</div><!--z index 1.3-->
+    <!--Si tienen todos el mismo z-index sería como en los comentarios de cada div-->
+</body>
+
+</html>
