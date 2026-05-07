@@ -5,10 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Absolute</title>
+    <style>
+        .contenedor {
+            border: 1px solid black;
+            margin: 40px;
+            position: relative;
+            /*Al darle position relative al contenedor, la esquina superior izquierda de este contenedor pasa a ser el punto de referencia de los objetos con position absolute que contenga*/
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background-color: #e84;
+        }
+
+        .box--blue {
+            background-color: #48e;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            /*al tener position absolute deja de tener lugar en el flujo de la página*/
+            /*Ahora top, bottom, left y right lo que hacen es que se mueva en la dirección indicada respecto a la esquina superior izquierda de la página por defecto*/
+            /*
+            Con las 4 direcciones a 0 y margin auto, se centra en el centro de esa caja automáticamente si está en absolute.
+            */
+        }
+
+        .box--red {
+            background-color: #e48;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="contenedor">
 
+        <div class="box">BOX 1</div>
+        <div class="box box--blue">BOX 2</div>
+        <div class="box box--red">BOX 3</div>
+
+    </div>
 </body>
 
 </html>

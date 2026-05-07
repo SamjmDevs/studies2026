@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid black;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .box {
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            color: white;
+            position: absolute;
+        }
+
+        .box1 {
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+
+        .box2 {
+            background-color: green;
+            top: 0;
+            right: 0;
+        }
+
+        .box3 {
+            background-color: blue;
+            bottom: 0;
+            left: 0;
+        }
+
+        .box4 {
+            color: black;
+            background-color: yellow;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="box box1">BOX 1</div>
+        <div class="box box2">BOX 2</div>
+        <div class="box box3">BOX 3</div>
+        <div class="box box4">BOX 4</div>
+    </div>
+</body>
+
+</html>
