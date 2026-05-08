@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: #48f;
+            position: relative;
+            left: 0;
+            margin-top: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            /*transition tiene que estar en la caja original*/
+            /*transition property para marcar la propiedad o propiedades que se van a alterar*/
+            transition-property: left, background-color, background;
+            /*transition delay para indicar cuanto tardará en comenzar la transición*/
+            transition-delay: .5s;
+            /*transition duration para indicar cuanto tardará la duración de principio a fin*/
+            transition-duration: 2.5s;
+            /*Modificamos la aceleración de la animación*/
+            transition-timing-function: ease;
+            /*
+            ease: por defecto => arranca fuerte y acaba más lento
+            ease-in => arranca lento y acaba rápido
+            ease-out => arranca fuerte y acaba lento
+            ease-in-out => arranca y termina lento, acelera en el medio
+            linear => ritmo constante 
+            */
+
+            /*Podemos definir curvas de bezier*/
+            /*transition-timing-function: cubic-bezier(val1, val2, val3, val4);*/
+            /*Coge una página de internet que te calcule las curvas o desde el inspector de elementos del navegador*/
+            /*cubic-bezier.com*/
+
+            /*podemos aunar todo en una propiedad solo*/
+            /*transition: propiedades, tiempo, estilo de animación o bezier, delay*/
+        }
+
+        body:hover .box {
+            background-color: #f84;
+            color: #fff;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">BOX</div>
+</body>
+
+</html>
