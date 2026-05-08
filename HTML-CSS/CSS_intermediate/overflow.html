@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbordamiento</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: #ccc;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: #fff;
+            margin: auto;
+            margin-top: 50px;
+            position: relative;
+            left: 0;
+            border: 1px solid black;
+            /*overflow: visible; es el predeterminado*/
+            /*overflow: hidden; oculta el contenido que se salga del contenedor*/
+            /*overflow: scroll; oculta el contenido que se salga del contenedor pero da barras de scroll para que se pueda seguir accediendo al contenido oculto*/
+            /*con overflow-x u overflow-y controlamos el tipo de overflow que tendrá el contenido según el eje
+            el problema es que la barra de scroll aparece incluso si no hay desbordamiento*/
+            /*Con overflow: auto; el problema se soluciona, ya que se adapta a las necesidades*/
+            /*Con overflow: clip; funciona como hidden pero no se reserva espacio para las barras de scroll*/
+
+            /*Control del flujo del texto*/
+            /*white-space: ; muestra como se comportan los espacios en blanco y los saltos en línea*/
+            /*white-space: normal; es la propiedad por defecto*/
+            /*white-space: pre; pone los saltos de línea IGUAL que los hayamos colocado en el texto dentro del editor*/
+            /*white-space: pre-wrap; pone los saltos de línea IGUAL que los hayamos colocado en el texto dentro del editor pero si tiene en cuenta los saltos de línea por desbordamiento*/
+            /*
+            para que aparezcan los famosos 3 puntitos, tenemos que usar 
+            white-space: nowrap o con pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            */
+            /*
+            Como se cortan las palabras
+            word-break: break-all; rompe las palabras por donde pille, sin respetar sílabas ni nada
+            word-break: keep-all; evita la ruptura de palabras, muy útil para idiomas como el koreano
+            word-break: auto-phrase; detecta cuando una palabra está por romperse y analiza la frase (es experimental)
+            overflow-wrap: break-word; separa en sílabas cuando hay un salto de línea que corta la palabra
+            overflow-wrap: anywhere; rompe la palabra si esta se desborda del contenedor y sigue sin caber entera al hacer un salto de línea
+            */
+
+            /*text-wrap: balance; rompe el texto para que quede de una manera más o menos estética, más para textos*/
+            /*text-wrap: pretty; rompe el texto para que quede de una manera sin viudas ni huérfanos (palabras sueltas en una sola línea), más para párrafos*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--Como se comporta el contenido que sobresale de su contenedor-->
+    <div class="box">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis reiciendis magni a eligendi, est
+            eaque,
+            veniam molestiae explicabo aut facilis quas alias illo repellat beatae voluptatem neque iste odio adipisci?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas quidem dolorem asperiores. Inventore nemo
+            autem
+            esse temporibus facere iusto doloremque eligendi quis! Quasi deleniti molestias explicabo repellendus error,
+            aliquid voluptas!</p>
+    </div>
+</body>
+
+</html>
