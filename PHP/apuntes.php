@@ -36,7 +36,6 @@
     <?= "Hola " . REALNAME . " " . SECONDNAME ?>
     </br>
 
-    <?= var_dump($name) ?>
     <?php
     #var_dump suelta toda la info de la variable
     ?>
