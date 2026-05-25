@@ -17,9 +17,10 @@ require __DIR__ . "/utils/seguridad.php";
     if (!$conection) {
         echo "<p>Algo malo pasa, no se pudo realizar la conexión</p>";
     } else {
-        echo "<p>Todo bien</p>";
-    }
+    ?>
 
+    <?php
+    }
     ?>
     <!---->
     <?php
