@@ -2,3 +2,76 @@ body {
     background-color: whitesmoke;
     margin: 0;
 }
+
+body,
+div {
+    box-sizing: border-box;
+}
+
+.contenedor {
+    margin: 20px;
+    border: 1px solid black;
+    height: 80vh;
+    display: flex;
+    /*flex-direction:row => main axis horizontal, cross axis vertical => es el predeterminado*/
+    flex-direction: row;
+    /*flex-direction: column => main axis vertical, cross axis horizontal => ocupa el 100% del cross axis*/
+    /*Predeterminado toman la dirección clásica del idioma, en este caso español, o sea, de izquierda a derecha y de arriba a abajo, usando la propiedad row/column-reverse, invertimos esas direcciones del MAIN AXIS*/
+    /*direction: ltr;*/
+    /*ltr => left to right -> rtl => right to left depende del idioma en el que queramos escribir*/
+    /*Para controlar si se mueven los hijos se usa flex-wrap, por defecto esta en no-wrap*/
+    flex-wrap: wrap;
+    /*Así sigue la dirección del cross axis, con reverse, va a contra del cross axis*/
+    /*flex-flow: dirección si_hay_wrap*/
+    /* justify-content: start => ojito, va con el main axis | start es el predeterminado*/
+    /*
+    start => al principio del eje
+    end => al final del eje
+    center => al centro del eje
+    space-between => el espacio entre los elementos es igual, el espacio entre el borde del primer y último elemento es el dado por el margin
+    space-around => separa igual los elementos, el margin izquierdo va a ser igual que el derecho, pero ojo, se suman, no se superponen esos "margin flex"
+    space-evenly => separa lo más igual posible los elementos, si hay margin la cosa puede variar un poco, sin margin la separación es equitativa
+    */
+    /* para column hay que definir la altura del contenedor, sino no hace efecto*/
+    /*reverse no cambia le dirección de alineamiento, cambia el orden de los items*/
+    justify-content: start;
+
+    /*align-item: es como justify-content pero en el cross axis*/
+    align-items: start;
+    /*
+    stretch => prederterminado => en ese eje estírate para llenarlo completo
+    start => se alinean al principio del cross axis y ocupan el contenido que tienen dentro
+    end => se alinean al final
+    center => se alinean al centro
+    baseline => se alinean según la línea base del texto
+    */
+    align-content: space-around;
+    /*complementa las otras opciones que da justify-content*/
+
+    /*aling-item es cuando solo tenemos una linea, no hay wrap ni nada*/
+}
+
+.box {
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.box1 {
+    /*padding: 20px; Dándole padding dejan de ser flexibles*/
+    background-color: aquamarine;
+}
+
+.box2 {
+
+    background-color: thistle;
+}
+
+.box3 {
+
+    background-color: burlywood;
+}
+
+.box4 {
+
+    background-color: lightskyblue;
+}
