@@ -48,7 +48,11 @@ div {
     align-content: space-around;
     /*complementa las otras opciones que da justify-content*/
 
-    /*aling-item es cuando solo tenemos una linea, no hay wrap ni nada*/
+    /*aling-item es cuando solo tenemos una linea, no hay wrap ni nada, se recomienda usar cuando haya solo una línea*/
+
+    /*Con order podemos cambiar el orden de los elementos según el main axis, cambia el orden visual, no cambia en el DOM*/
+
+    /* timestamp => 12:40:40*/
 }
 
 .box {
