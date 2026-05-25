@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            background-color: red;
+            width: 150px;
+            margin: auto;
+            margin-top: 50px;
+            border: 5px solid black;
+            padding: 10px;
+            /*
+            outline-width: 13px;
+            outline-color: lightblue;
+            outline-style: solid;
+            outline-offset: 3px; /*Define cuanto se va a separar del contenedor*/
+            outline: 13px solid lightblue;
+            /*offset se tiene que poner aparte*/
+            /*
+            Para quitar el outline 
+
+            .box:focus-visible{
+            aquí le damos el none
+            }
+            */
+        }
+
+        /*entre margin y border hay otra propiedad, el outline, no ocupa espacio, es solo visual*/
+    </style>
+</head>
+
+<body>
+    <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</div>
+</body>
+
+</html>

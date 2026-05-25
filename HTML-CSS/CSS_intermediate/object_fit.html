@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object Fit</title>
+    <style>
+        img {
+            width: 400px;
+            height: 100px;
+            /*object-fit: fill => es la predeterminada*/
+            object-fit: contain;
+            /*hace que la imagen entre al menos una vez en la resolución dada, alguna de las dos dimensiones esté al 100%, escala la otra*/
+            /*object-fit: cover => se adapta al contenedor, es como overflow hidden*/
+            /*Con object-position => cuando no entra entera en el contendor, hay overflow, le indicamos que parte de la imagen mostrar*/
+            /*object-fit: none => mantiene la resolución original de la imagen*/
+            /*object-fit: scale-down => Nos ajustamos al valor inferior => se ajusta a contain o none*/
+        }
+    </style>
 </head>
+
 <body>
-    <!--11:11:54-->
+    <img src="hamster.png" alt="hamstercillo" title="hamstercillo">
 </body>
+
 </html>
