@@ -88,7 +88,75 @@
     </div>
 
     <script>
-        // Siguiente paso: Lógica de actualización del vídeo basada en la puntuación
+        // 1. Configuración de los tramos de puntuación y sus vídeos
+        const VIDEO_THRESHOLDS = [
+            { score: 0, src: 'video_level_1.mp4', label: 'Nivel Inicial' },
+            { score: 100, src: 'video_level_2.mp4', label: 'Primer Logro' },
+            { score: 500, src: 'video_level_3.mp4', label: 'Racha Promedio' },
+            { score: 1000, src: 'video_level_max.mp4', label: 'Puntuación Máxima' }
+        ];
+
+        // 2. Variables de estado del juego
+        let currentScore = 0;
+        let currentVideoSrc = '';
+
+        // 3. Referencia al elemento DOM
+        const rewardVideo = document.getElementById('reward-video');
+
+        /**
+         * Actualiza la puntuación del juego y evalúa si corresponde cambiar el vídeo.
+         * @param {number} pointsToAdd - Puntos obtenidos en la última jugada.
+         */
+        function addScore(pointsToAdd) {
+            currentScore += pointsToAdd;
+            console.log(`Puntuación actual: ${currentScore}`);
+
+            checkVideoThresholds(currentScore);
+        }
+
+        /**
+         * Evalúa las flags/umbrales de puntuación y cambia la fuente del vídeo si procede.
+         * @param {number} score - Puntuación actual del jugador.
+         */
+        function checkVideoThresholds(score) {
+            // Buscamos el último umbral que la puntuación actual haya superado o igualado
+            let targetConfig = VIDEO_THRESHOLDS[0];
+
+            for (let i = VIDEO_THRESHOLDS.length - 1; i >= 0; i--) {
+                if (score >= VIDEO_THRESHOLDS[i].score) {
+                    targetConfig = VIDEO_THRESHOLDS[i];
+                    break;
+                }
+            }
+
+            // Cambiar de vídeo solo si el umbral alcanzado implica un archivo distinto al actual
+            if (targetConfig.src !== currentVideoSrc) {
+                changeVideo(targetConfig.src);
+            }
+        }
+
+        /**
+         * Carga y reproduce de forma segura el nuevo vídeo.
+         * @param {string} newSrc - Ruta del vídeo a cargar.
+         */
+        function changeVideo(newSrc) {
+            currentVideoSrc = newSrc;
+
+            // Aplicar ligera transición o refresco de fuente
+            rewardVideo.src = newSrc;
+            rewardVideo.load();
+
+            // Manejo de la promesa de reproducción por políticas de autoplay del navegador
+            const playPromise = rewardVideo.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.warn("La reproducción automática fue bloqueada o interrumpida:", error);
+                });
+            }
+        }
+
+        // Inicialización: cargar el vídeo por defecto (0 puntos)
+        checkVideoThresholds(currentScore);
     </script>
 </body>
 
