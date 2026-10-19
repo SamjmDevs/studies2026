@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Rol</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+
+        .contenedorTiradas {
+            display: flex;
+        }
+
+        .cuadroTirada {
+            margin: 5px;
+            height: 60px;
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Realiza tu tirada</h2>
+        <h3>Tipo de tirada</h3>
+        <input type="radio" name="tipo" id="desventaja"><label for="desventaja">Desventaja</label>
+        <input type="radio" name="tipo" id="normal"><label for="normal">Normal</label>
+        <input type="radio" name="tipo" id="ventaja"><label for="ventaja">Ventaja</label>
+        <!---->
+        <h3>Dado Utilizado</h3>
+        <select name="tipoDado" id="tipoDado">
+            <option value="d4">D4</option>
+            <option value="d6">D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+            <option value="d12">D12</option>
+            <option value="d20">D20</option>
+        </select>
+        <div class="contenedorTiradas">
+            <div class="cuadroTirada" id="tirada1"></div>
+            <div class="cuadroTirada" id="tirada2"></div>
+            <div class="cuadroTirada" id="tirada3"></div>
+        </div>
+
+    </div>
+    <script>
+
+    </script>
+</body>
+
+</html>
